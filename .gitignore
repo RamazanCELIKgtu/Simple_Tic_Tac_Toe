@@ -1,0 +1,33 @@
+# course config files
+*.yaml
+
+# gradle
+.gradle/
+gradle/
+gradlew
+*.bat
+build
+
+
+# idea confid
+.idea
+
+# old stages
+/Simple Tic-Tac-Toe/*
+!/Simple Tic-Tac-Toe/task/
+/Simple Tic-Tac-Toe/task/*
+!/Simple Tic-Tac-Toe/task/src/
+!/Simple Tic-Tac-Toe/task/build.gradle
+!/Simple Tic-Tac-Toe/task/build.gradle.kts
+
+# Project exclude paths
+/Topics/For loop and lists/Number in a set/out/
+/Topics/For loop and lists/Number in a set/out/production/classes/
+/Topics/Getting substrings/Exchange/out/
+/Topics/Getting substrings/Exchange/out/production/classes/
+/Topics/Processing strings/Convert a date/out/
+/Topics/Processing strings/Convert a date/out/production/classes/
+/Topics/Processing strings/The lucky ticket/out/
+/Topics/Processing strings/The lucky ticket/out/production/classes/
+/Topics/The try-catch statement/Braking distance/out/
+/Topics/The try-catch statement/Braking distance/out/production/classes/
