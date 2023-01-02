@@ -21,7 +21,7 @@ fun whoWins(a: MutableList<MutableList<Char>>): String {
     return str
 }
 
-fun printer() {
+fun gridPrinter() {
     println("---------")
     for (i in 0..2){
         print("|")
@@ -36,23 +36,29 @@ fun printer() {
 
 fun main() {
     while (true){
+        // checks draw condition
+        if ((whoWins(m) != "X wins" || whoWins(m) != "O wins") && counter == 8) { 
+            gridPrinter()
+            println("Draw")
+            break
+        } // checks who wins and prints grid 
         if (whoWins(m) != ""){
-            printer()
+            gridPrinter()
             println(whoWins(m))
             break
         }
-        printer()
+        gridPrinter()
         try {
             val a = readln().split(' ')
             if (m[a[0].toInt() - 1][a[1].toInt() - 1] == ' ') {
-                counter++
+                counter++ 
+                // checks whose turn it is and assign 'X' or 'O'
                 if (counter % 2 == 0){
                 m[a[0].toInt() - 1][a[1].toInt() - 1] = 'X'
                 continue
                 }
                 else {
                     m[a[0].toInt() - 1][a[1].toInt() - 1] = 'O'
-                    continue
                 }
             }
             else println("This cell is occupied! Choose another one!")
